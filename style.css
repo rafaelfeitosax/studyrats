@@ -1,0 +1,206 @@
+:root {
+    --color-dark: #1A1A1D;
+    --color-white: #FFFFFF;
+    --color-green-vibrant: #66CC33;
+    --color-fire: #FF6600;
+    --color-gray: #AAAAAA;
+    --color-card-bg: #2C2C30;
+    --font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app-foco {
+    width: 375px;
+    height: 812px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+    position: relative;
+    padding-bottom: 70px;
+    scrollbar-width: none;
+}
+.app-foco::-webkit-scrollbar {
+    display: none;
+}
+
+.cabecalho {
+    padding: 20px;
+}
+
+.info-usuario {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.foto-perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.nome-usuario {
+    font-weight: 600;
+    margin: 0;
+}
+
+.nivel {
+    font-size: 0.8em;
+    color: var(--color-gray);
+    margin: 0;
+}
+
+.display-tempo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.valor-tempo {
+    font-size: 3em;
+    font-weight: 800;
+    color: var(--color-white);
+    margin: 0 0 10px 0;
+}
+
+.container-progresso {
+    background-color: var(--color-card-bg);
+    height: 8px;
+    border-radius: 4px;
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+}
+
+.barra-progresso {
+    height: 100%;
+    background-color: var(--color-green-vibrant);
+    border-radius: 4px;
+}
+
+.texto-meta {
+    font-size: 0.9em;
+    color: var(--color-gray);
+    display: block;
+    margin-top: 5px;
+}
+
+.texto-prova {
+    font-size: 0.8em;
+    color: var(--color-gray);
+    margin-top: 15px;
+}
+
+.botao-principal {
+    width: 90%;
+    padding: 18px;
+    margin: 0 5%;
+    background-color: var(--color-green-vibrant);
+    color: var(--color-dark);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(102, 204, 51, 0.4);
+    transition: background-color 0.3s;
+}
+.botao-principal:hover {
+    background-color: #77e644;
+}
+
+.feed-foco {
+    padding: 20px;
+}
+
+.titulo-feed {
+    color: var(--color-fire);
+    font-size: 1.2em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.cartao-feed {
+    background-color: var(--color-card-bg);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.cartao-feed .imagem-cartao {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.cartao-feed .texto-cartao {
+    font-size: 0.95em;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+.cartao-feed .estatisticas-cartao {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85em;
+    color: var(--color-gray);
+}
+
+.cartao-feed .estatisticas-cartao span:first-child {
+    color: var(--color-fire);
+    font-weight: 600;
+}
+
+.foto-perfil-pequena {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+
+.barra-navegacao {
+    position: fixed;
+    bottom: 0;
+    width: 375px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-card-bg);
+    height: 60px;
+    border-top: 1px solid #333;
+    z-index: 10;
+    border-radius: 0 0 40px 40px;
+}
+
+.item-navegacao {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 0.7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 5px;
+}
+
+.item-navegacao.active {
+    color: var(--color-green-vibrant);
+    font-weight: 700;
+}
